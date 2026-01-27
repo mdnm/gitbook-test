@@ -1,12 +1,15 @@
-# Summary
+# Table of contents
 
 ## Getting Started
 
-* [Introduction](README.md)
+* [Start here](README.md)
+* [Introduction](<README (1).md>)
 * [Getting Started](docs/getting-started.md)
 * [Installation](docs/installation.md)
 * [Features](docs/features.md)
 * [Quickstart](docs/quickstart.md)
+* [Concepts and terminology](getting-started/concepts-and-terminology.md)
+* [Practical recipes](getting-started/practical-recipes.md)
 
 ## Modules
 
@@ -19,6 +22,7 @@
 
 ## Guides
 
+* [Using Kaabalah in real projects](guides/using-kaabalah-in-real-projects.md)
 * [WebAssembly Integration](guides/webassembly.md)
 
 ## Reference

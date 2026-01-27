@@ -19,7 +19,7 @@ pnpm install kaabalah
 
 {% tab title="yarn" %}
 ```bash
-yarn kaabalah
+yarn add kaabalah
 ```
 {% endtab %}
 {% endtabs %}
@@ -34,6 +34,12 @@ const tree = createTree({
   parts: ['westernAstrology', 'tarot'],
 });
 ```
+
+### Practical next steps
+
+* If the terminology feels foreign, start with [Concepts and terminology](../getting-started/concepts-and-terminology.md).
+* If you want copy-paste workflows, jump to [Practical recipes](../getting-started/practical-recipes.md).
+* If you’re doing astrology in the browser, read [WebAssembly Integration](../guides/webassembly.md).
 
 ***
 

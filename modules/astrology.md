@@ -79,7 +79,7 @@ console.log(chart.planets.sun);  // Sun position
 console.log(chart.houses.ascendant);  // Ascendant
 ```
 
-### Live example
+## Live example
 
 {% embed url="https://astrology.kaabalah.com" %}
 

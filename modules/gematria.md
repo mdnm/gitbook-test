@@ -122,7 +122,7 @@ const matches = reverseGematria({
 });
 ```
 
-### Live example
+## Live example
 
 {% embed url="https://gematria.kaabalah.com" %}
 

@@ -35,7 +35,7 @@ console.log(odu.north);  // North direction Odu
 console.log(odu.center); // Center/synthesis Odu
 ```
 
-### Live example
+## Live example
 
 {% embed url="https://numerology.kaabalah.com/odu" %}
 

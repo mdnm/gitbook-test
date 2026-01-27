@@ -104,7 +104,7 @@ console.log(lifePath.syntheses.finalSynthesis);  // Final synthesis
 console.log(lifePath.personalMythologyNumbers);  // Personal mythology
 ```
 
-### Live example
+## Live example
 
 {% embed url="https://numerology.kaabalah.com" %}
 

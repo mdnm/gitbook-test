@@ -59,7 +59,7 @@ const shuffled = await shuffleTarotDeck(ARKANNUS, true);
 const spread = shuffled.slice(0, 3);
 ```
 
-### Live example
+## Live example
 
 {% embed url="https://tarot.kaabalah.com" %}
 

@@ -17,7 +17,7 @@ pnpm install kaabalah
 
 {% tab title="yarn" %}
 ```bash
-yarn kaabalah
+yarn add kaabalah
 ```
 {% endtab %}
 {% endtabs %}

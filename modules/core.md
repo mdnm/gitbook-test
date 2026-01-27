@@ -150,7 +150,7 @@ const kether = tree.addSphere({
 const related = tree.related(kether);
 ```
 
-### Live example
+## Live example
 
 {% embed url="https://archetypes.kaabalah.com" %}
 

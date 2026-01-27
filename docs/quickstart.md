@@ -2,46 +2,61 @@
 
 ## Usage Examples
 
-### Core Library
+If you’re new to the domain, read:
+
+* [Concepts and terminology](../getting-started/concepts-and-terminology.md)
+* [Practical recipes](../getting-started/practical-recipes.md)
+
+### Numerology (life path)
 
 ```typescript
-import { createTree } from 'kaabalah/core';
+import { calculateKaabalisticLifePath } from 'kaabalah/numerology';
 
-const tree = createTree({
-  system: 'kaabalah',
-  parts: ['westernAstrology', 'tarot'],
-});
+const lifePath = calculateKaabalisticLifePath(new Date('1990-06-15'));
 
-const gematriaResult = calculateGematria('kaabalah', tree);
-
-console.log(gematriaResult);
+console.log(lifePath.lifePath.reducedValue);
+console.log(lifePath.syntheses.finalSynthesis);
 ```
 
-### Direct Module Imports (Tree-Shakable)
+### Gematria (text → number)
 
 ```typescript
-// Only import what you need
-import { calculateLifePath } from 'kaabalah/numerology';
-import { getBirthChart } from 'kaabalah/astrology';
-import { calculateGematria } from 'kaabalah/kaabalah';
-import { getRandomSpread } from 'kaabalah/tarot';
+import { calculateGematria } from 'kaabalah/gematria';
 
-// Calculate life path number
-const lifePath = calculateLifePath(new Date('1990-01-15'));
+const gematria = calculateGematria('DAVID');
 
-// Generate a birth chart (with Swiss Ephemeris)
-const birthChart = getBirthChart({
-  date: new Date('1990-01-15T12:30:00Z'),
+console.log(gematria.synthesis.originalSum);
+console.log(gematria.vowels.originalSum);
+console.log(gematria.consonants.originalSum);
+```
+
+### Tarot (shuffle + draw)
+
+```typescript
+import { ARKANNUS, shuffleTarotDeck } from 'kaabalah/tarot';
+
+const shuffled = await shuffleTarotDeck(ARKANNUS, true);
+const spread = shuffled.slice(0, 3);
+
+console.log(spread.map((c) => c.tarotCard));
+```
+
+### Astrology (birth chart)
+
+```typescript
+import { getBirthChart, HouseSystem } from 'kaabalah/astrology';
+
+const chart = await getBirthChart({
+  // Local time
+  date: new Date(1990, 5, 15, 12, 30, 0),
   latitude: 40.7128,
   longitude: -74.0060,
-  timezone: -5
+  houseSystem: HouseSystem.PLACIDUS,
+  timeZoneSettings: { timeZone: 'America/New_York' },
 });
 
-// Calculate Hebrew gematria
-const gematriaValue = calculateGematria('kaabalah');
-
-// Get a tarot spread
-const spread = getRandomSpread(3, true);
+console.log(chart.planets.sun.longitude);
+console.log(chart.houses.ascendant.longitude);
 ```
 
 ***
