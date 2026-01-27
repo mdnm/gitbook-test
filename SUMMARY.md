@@ -3,7 +3,6 @@
 ## Getting Started
 
 * [Introduction](README.md)
-* [Start here](<README (1).md>)
 * [Getting Started](docs/getting-started.md)
 * [Installation](docs/installation.md)
 * [Quickstart](docs/quickstart.md)
