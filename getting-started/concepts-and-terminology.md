@@ -88,3 +88,7 @@ Practical tip:
 Practical tip:
 
 * Use `TreeOfLife` when you want cross-module linking.
+
+***
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/matmoura19)

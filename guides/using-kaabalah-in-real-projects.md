@@ -112,3 +112,7 @@ You need to teach your UI.
 * Start with “number + label”.
 * Add a one-line meaning.
 * Add a “show steps” expand.
+
+***
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/matmoura19)

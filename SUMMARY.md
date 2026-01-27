@@ -2,12 +2,12 @@
 
 ## Getting Started
 
-* [Start here](README.md)
-* [Introduction](<README (1).md>)
+* [Introduction](README.md)
+* [Start here](<README (1).md>)
 * [Getting Started](docs/getting-started.md)
 * [Installation](docs/installation.md)
-* [Features](docs/features.md)
 * [Quickstart](docs/quickstart.md)
+* [Features](docs/features.md)
 * [Concepts and terminology](getting-started/concepts-and-terminology.md)
 * [Practical recipes](getting-started/practical-recipes.md)
 

@@ -132,3 +132,7 @@ Practical tip:
 
 * Treat `TreeOfLife` as your in-memory knowledge graph.
 * Serialize only what you need.
+
+***
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/matmoura19)
