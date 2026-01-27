@@ -18,31 +18,110 @@ import { TreeOfLife, BaseNode, SPHERES, ... } from 'kaabalah/core';
 
 ## Examples
 
-### should add nodes and links, retrieving relations correctly
+### Add nodes and links, retrieving relations correctly
 
 ```typescript
+import { TreeOfLife, SPHERES, SPHERES_DATA } from "kaabalah";
+
 const treeOfLife = new TreeOfLife();
-    const kether = treeOfLife.addSphere({
+
+const kether = treeOfLife.addSphere({
+  sphere: SPHERES.KETHER,
+  data: SPHERES_DATA.KETHER,
+  relatedNumber: 1,
+});
+const chokhmah = treeOfLife.addSphere({
+  sphere: SPHERES.CHOKHMAH,
+  data: SPHERES_DATA.CHOKHMAH,
+  relatedNumber: 2,
+});
+
+const path11 = treeOfLife.addPath({
+  leftSphere: kether,
+  rightSphere: chokhmah,
+  relatedNumber: 1,
+});
 ```
 
-### should throw an error when trying to link unknown nodes
+### Correctly link nodes
 
 ```typescript
+import { TreeOfLife, BaseNode, SPHERES, SPHERES_DATA, HEBREW_LETTERS_DATA } from "kaabalah";
+
 const treeOfLife = new TreeOfLife();
+
+const chokhmah = treeOfLife.addSphere({
+  sphere: SPHERES.CHOKHMAH,
+  data: SPHERES_DATA.CHOKHMAH,
+  relatedNumber: 2,
+});
+const binah = treeOfLife.addSphere({
+  sphere: SPHERES.BINAH,
+  data: SPHERES_DATA.BINAH,
+  relatedNumber: 3,
+});
+
+const path14 = treeOfLife.addPath({
+  leftSphere: chokhmah,
+  rightSphere: binah,
+  relatedNumber: 4,
+});
+
+treeOfLife.addLetters({
+  path: path14,
+  letters: [
+    {
+      letter: "Aleph",
+      type: LetterTypes.HEBREW_LETTER,
+      data: HEBREW_LETTERS_DATA.ALEPH,
+    },
+    { letter: "A", type: LetterTypes.LATIN_LETTER },
+  ],
+});
+
+const air = treeOfLife.upsertNode(
+  new BaseNode({ id: "Air", type: WesternAstrologyTypes.WESTERN_ELEMENT })
+);
+treeOfLife.link(path14, air);
+
+const jupiter = treeOfLife.upsertNode(
+  new BaseNode({ id: "Jupiter", type: WesternAstrologyTypes.PLANET })
+);
+treeOfLife.link(path14, jupiter);
+
+const theEmperor = treeOfLife.addTarotArkAnnu({
+  node: path14,
+  tarotArkAnnu: "The Emperor",
+  data: { type: "major" },
+  relatedNumber: 14,
+});
 ```
 
-### should correctly link nodes
+### Correctly remove nodes
 
 ```typescript
-const treeOfLife = new TreeOfLife();
-    const chokhmah = treeOfLife.addSphere({
-```
+import { TreeOfLife, SPHERES, SPHERES_DATA } from "kaabalah";
 
-### should correctly remove nodes
-
-```typescript
 const treeOfLife = new TreeOfLife();
-    const chokhmah = treeOfLife.addSphere({
+
+const chokhmah = treeOfLife.addSphere({
+  sphere: SPHERES.CHOKHMAH,
+  data: SPHERES_DATA.CHOKHMAH,
+  relatedNumber: 2,
+});
+const binah = treeOfLife.addSphere({
+  sphere: SPHERES.BINAH,
+  data: SPHERES_DATA.BINAH,
+  relatedNumber: 3,
+});
+
+const path14 = treeOfLife.addPath({
+  leftSphere: chokhmah,
+  rightSphere: binah,
+  relatedNumber: 4,
+});
+
+treeOfLife.removeNode(chokhmah);
 ```
 
 ## Tree of Life Structure

@@ -15,34 +15,84 @@ import { calculateGematria, reverseGematria } from 'kaabalah/gematria';
 
 ## Examples
 
-### should calculate correct values for letter %s
+### Handle O at start (AYIN = 70) vs elsewhere (VAV = 6)
 
 ```typescript
-const result = calculateGematria(input as string);
+import { reverseGematria } from "kaabalah";
+
+// O at start = 70
+const resultO = reverseGematria({ targetVowels: 70, maxLength: 1 });
+
+// AO = A(1) + O(6) = 7 vowels (O not at start)
+const resultAO = reverseGematria({
+  targetVowels: 7,
+  targetConsonants: 0,
+  minLength: 2,
+  maxLength: 2,
+});
 ```
 
-### should calculate missing letters
+### Handle ending letter values
 
 ```typescript
-calculateGematria("ABCDEFGHIJKLMNOPQRSTUVWXYZ", { missing: true
+import { reverseGematria } from "kaabalah";
+
+// C at end = 500 (Kaph sofit), C in middle = 20
+// AC = A(1) + C(500) = 501 synthesis, 1 vowel, 500 consonants
+const resultAC = reverseGematria({
+  targetConsonants: 500,
+  targetVowels: 1,
+  minLength: 2,
+  maxLength: 2,
+});
+const acResult = resultAC.results.find((r) => r.letters === "AC");
+
+// M at end = 600 (Mem sofit)
+const resultAM = reverseGematria({
+  targetConsonants: 600,
+  targetVowels: 1,
+  minLength: 2,
+  maxLength: 2,
+});
 ```
 
-### should calculate letter percentages
+### Include digraphs when includeDigraphs is true
 
 ```typescript
-calculateGematria("KAABALAH", { percentages: true
+import { reverseGematria } from "kaabalah";
+
+// SH = 300
+const resultWithDigraphs = reverseGematria({
+  targetConsonants: 300,
+  maxLength: 2,
+  includeDigraphs: true,
+});
 ```
 
-### should correctly handle multiple words
+### Exclude digraphs when includeDigraphs is false
 
 ```typescript
-const { consonants, vowels
+import { reverseGematria } from "kaabalah";
+
+const resultWithoutDigraphs = reverseGematria({
+  targetConsonants: 300,
+  maxLength: 2,
+  includeDigraphs: false,
+});
+// SH should not be present, but X (300) should be
 ```
 
-### should correctly return the included letters
+### Set hasMore when more results exist
 
 ```typescript
-const { includedLetters
+import { reverseGematria } from "kaabalah";
+
+const result = reverseGematria({
+  targetSynthesis: 10,
+  maxResults: 1,
+  maxLength: 5,
+});
+// There are many ways to reach synthesis of 10
 ```
 
 ## How Gematria Works
