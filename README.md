@@ -25,9 +25,25 @@ metaLinks:
 
 <p align="center"><strong>The de-facto library for esoteric calculations and tooling</strong></p>
 
+{% tabs %}
+{% tab title="npm" %}
 ```bash
 npm install kaabalah
 ```
+{% endtab %}
+
+{% tab title="pnpm" %}
+```bash
+pnpm install kaabalah
+```
+{% endtab %}
+
+{% tab title="yarn" %}
+```bash
+yarn add kaabalah
+```
+{% endtab %}
+{% endtabs %}
 
 ## Modules
 
