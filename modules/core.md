@@ -10,11 +10,11 @@ import { TreeOfLife, BaseNode, SPHERES, ... } from 'kaabalah/core';
 
 ## Exports
 
-- `TreeOfLife`
-- `BaseNode`
-- `SPHERES`
-- `SPHERES_DATA`
-- `HEBREW_LETTERS_DATA`
+* `TreeOfLife`
+* `BaseNode`
+* `SPHERES`
+* `SPHERES_DATA`
+* `HEBREW_LETTERS_DATA`
 
 ## Examples
 
@@ -128,9 +128,9 @@ treeOfLife.removeNode(chokhmah);
 
 The Tree of Life consists of:
 
-- **10 Sephiroth (Spheres)**: Kether, Chokhmah, Binah, Chesed, Geburah, Tiphareth, Netzach, Hod, Yesod, Malkuth
-- **22 Paths**: Connecting the Sephiroth, associated with Hebrew letters
-- **Correspondences**: Links to tarot, astrology, numerology, and more
+* **10 Sephiroth (Spheres)**: Kether, Chokhmah, Binah, Chesed, Geburah, Tiphareth, Netzach, Hod, Yesod, Malkuth
+* **22 Paths**: Connecting the Sephiroth, associated with Hebrew letters
+* **Correspondences**: Links to tarot, astrology, numerology, and more
 
 ## Usage Example
 
@@ -150,8 +150,10 @@ const kether = tree.addSphere({
 const related = tree.related(kether);
 ```
 
----
+### Live example
 
-If you find this package useful, you can support it on Ko-Fi too (or just star the repo):
+{% embed url="https://archetypes.kaabalah.com" %}
+
+***
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/matmoura19)

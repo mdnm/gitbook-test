@@ -1,5 +1,7 @@
 ---
-description: A comprehensive TypeScript library for numerology, astrology, kabbalah, and tarot
+description: >-
+  A comprehensive TypeScript library for numerology, astrology, kaabalah, and
+  tarot
 layout:
   width: wide
   title:
@@ -12,9 +14,14 @@ layout:
     visible: false
   pagination:
     visible: true
+  metadata:
+    visible: true
+metaLinks:
+  alternates:
+    - https://app.gitbook.com/s/2AwfWOGBWBxQmyvHedqW/
 ---
 
-# Kaabalah
+# Introduction
 
 <p align="center"><strong>The de-facto library for esoteric calculations and tooling</strong></p>
 
@@ -24,30 +31,20 @@ npm install kaabalah
 
 ## Modules
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody>
-<tr><td><strong>🔢 Numerology</strong></td><td>Life path, cycles, challenges, and personal mythology calculations</td><td><a href="modules/numerology.md">modules/numerology.md</a></td></tr>
-<tr><td><strong>✡️ Gematria</strong></td><td>Hebrew letter values with reverse gematria lookup</td><td><a href="modules/gematria.md">modules/gematria.md</a></td></tr>
-<tr><td><strong>🌟 Astrology</strong></td><td>Birth charts and planetary positions via Swiss Ephemeris</td><td><a href="modules/astrology.md">modules/astrology.md</a></td></tr>
-<tr><td><strong>🃏 Tarot</strong></td><td>78 cards with meanings, spreads, and interpretations</td><td><a href="modules/tarot.md">modules/tarot.md</a></td></tr>
-<tr><td><strong>🐚 Ifa</strong></td><td>Odu calculations based on dates for Ifa divination</td><td><a href="modules/ifa.md">modules/ifa.md</a></td></tr>
-<tr><td><strong>🌳 Core</strong></td><td>Tree of Life system linking all esoteric correspondences</td><td><a href="modules/core.md">modules/core.md</a></td></tr>
-</tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>🔢 Numerology</strong></td><td>Life path, cycles, challenges, and personal mythology calculations</td><td><a href="modules/numerology.md">numerology.md</a></td></tr><tr><td><strong>✡️ Gematria</strong></td><td>Hebrew letter values with reverse gematria lookup</td><td><a href="modules/gematria.md">gematria.md</a></td></tr><tr><td><strong>🌟 Astrology</strong></td><td>Birth charts and planetary positions via Swiss Ephemeris</td><td><a href="modules/astrology.md">astrology.md</a></td></tr><tr><td><strong>🃏 Tarot</strong></td><td>78 cards with meanings, spreads, and interpretations</td><td><a href="modules/tarot.md">tarot.md</a></td></tr><tr><td><strong>🐚 Ifa</strong></td><td>Odu calculations based on dates for Ifa divination</td><td><a href="modules/ifa.md">ifa.md</a></td></tr><tr><td><strong>🌳 Core</strong></td><td>Tree of Life system linking all esoteric correspondences</td><td><a href="modules/core.md">core.md</a></td></tr></tbody></table>
 
 ## Quick Start
 
 {% columns %}
 {% column %}
-
-### Get started in 5 minutes
+#### Get started in 5 minutes
 
 Setting up your first calculation is easy. With clear APIs, copy-paste-ready examples, and quick setup, you'll be up and running in minutes.
 
 <a href="docs/getting-started.md" class="button primary">Get Started</a> <a href="reference/api.md" class="button secondary">API Reference</a>
-
 {% endcolumn %}
 
 {% column %}
-
 {% code title="example.ts" overflow="wrap" %}
 ```typescript
 import { calculateGematria } from 'kaabalah/gematria';
@@ -62,7 +59,6 @@ const lifePath = calculateKaabalisticLifePath(new Date('1990-06-15'));
 console.log(lifePath.lifePath.reducedValue);
 ```
 {% endcode %}
-
 {% endcolumn %}
 {% endcolumns %}
 
@@ -70,8 +66,7 @@ console.log(lifePath.lifePath.reducedValue);
 
 {% columns %}
 {% column %}
-
-### Tree-Shakable
+#### Tree-Shakable
 
 Import only what you need. Each module is independently tree-shakable for optimal bundle size.
 
@@ -79,38 +74,27 @@ Import only what you need. Each module is independently tree-shakable for optima
 // Only imports gematria module
 import { calculateGematria } from 'kaabalah/gematria';
 ```
-
 {% endcolumn %}
 
 {% column %}
-
-### TypeScript First
+#### TypeScript First
 
 Full TypeScript support with comprehensive type definitions for all functions and return values.
 
 ```typescript
 import type { TarotCard, GematriaResult } from 'kaabalah';
 ```
-
 {% endcolumn %}
 {% endcolumns %}
 
 ## Learn More
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody>
-<tr><td><strong>📚 Documentation</strong></td><td>Complete guides and tutorials for all modules</td><td><a href="docs/getting-started.md">docs/getting-started.md</a></td></tr>
-<tr><td><strong>🔧 WebAssembly</strong></td><td>Swiss Ephemeris WASM integration guide</td><td><a href="guides/webassembly.md">guides/webassembly.md</a></td></tr>
-<tr><td><strong>📖 API Reference</strong></td><td>Detailed API documentation for all exports</td><td><a href="reference/api.md">reference/api.md</a></td></tr>
-</tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>📚 Documentation</strong></td><td>Complete guides and tutorials for all modules</td><td><a href="docs/getting-started.md">getting-started.md</a></td></tr><tr><td><strong>🔧 WebAssembly</strong></td><td>Swiss Ephemeris WASM integration guide</td><td><a href="guides/webassembly.md">webassembly.md</a></td></tr><tr><td><strong>📖 API Reference</strong></td><td>Detailed API documentation for all exports</td><td><a href="reference/api.md">api.md</a></td></tr></tbody></table>
 
 ## Community
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody>
-<tr><td><strong>GitHub</strong></td><td>100% open source. Star the repo, report issues, or submit PRs.</td><td><a href="https://github.com/mdnm/kaabalah" class="button secondary">View on GitHub</a></td></tr>
-</tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>GitHub</strong></td><td>100% open source. Star the repo, report issues, or submit PRs.</td><td><a href="https://github.com/mdnm/kaabalah" class="button secondary">View on GitHub</a></td></tr></tbody></table>
 
----
-
-If you find this package useful, you can support it on Ko-Fi too (or just star the repo):
+***
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/matmoura19)

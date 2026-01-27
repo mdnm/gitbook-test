@@ -10,8 +10,8 @@ import { calculateGematria, reverseGematria } from 'kaabalah/gematria';
 
 ## Exports
 
-- `calculateGematria`
-- `reverseGematria`
+* `calculateGematria`
+* `reverseGematria`
 
 ## Examples
 
@@ -99,10 +99,10 @@ const result = reverseGematria({
 
 Latin letters are mapped to Hebrew letter values:
 
-- Vowels (A, E, I, O, U, W, Y) have specific values
-- Consonants map to Hebrew consonant values
-- Position-dependent values (e.g., O at start = 70, elsewhere = 6)
-- Final letter forms (sofit) when at word end
+* Vowels (A, E, I, O, U, W, Y) have specific values
+* Consonants map to Hebrew consonant values
+* Position-dependent values (e.g., O at start = 70, elsewhere = 6)
+* Final letter forms (sofit) when at word end
 
 ## Usage Example
 
@@ -122,8 +122,10 @@ const matches = reverseGematria({
 });
 ```
 
----
+### Live example
 
-If you find this package useful, you can support it on Ko-Fi too (or just star the repo):
+{% embed url="https://gematria.kaabalah.com" %}
+
+***
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/matmoura19)

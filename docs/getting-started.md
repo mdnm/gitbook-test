@@ -4,9 +4,25 @@ Kaabalah is a comprehensive TypeScript library for numerology, astrology, kaabal
 
 ## Installation
 
+{% tabs %}
+{% tab title="npm" %}
 ```bash
 npm install kaabalah
 ```
+{% endtab %}
+
+{% tab title="pnpm" %}
+```bash
+pnpm install kaabalah
+```
+{% endtab %}
+
+{% tab title="yarn" %}
+```bash
+yarn kaabalah
+```
+{% endtab %}
+{% endtabs %}
 
 ## Quick Example
 
@@ -19,8 +35,6 @@ const tree = createTree({
 });
 ```
 
----
-
-If you find this package useful, you can support it on Ko-Fi too (or just star the repo):
+***
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/matmoura19)

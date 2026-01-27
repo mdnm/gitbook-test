@@ -2,6 +2,14 @@
 
 Generate birth charts and planetary positions using Swiss Ephemeris
 
+### WebAssembly usage
+
+This library uses the Swiss Ephemeris for astrological calculations, find the integration guide here:
+
+{% content-ref url="../guides/webassembly.md" %}
+[webassembly.md](../guides/webassembly.md)
+{% endcontent-ref %}
+
 ## Import
 
 ```typescript
@@ -10,8 +18,8 @@ import { getBirthChart, HouseSystem } from 'kaabalah/astrology';
 
 ## Exports
 
-- `getBirthChart`
-- `HouseSystem`
+* `getBirthChart`
+* `HouseSystem`
 
 ## Examples
 
@@ -49,10 +57,10 @@ const mcDifference = Math.abs(laterChart.houses.mc.longitude - chart.houses.mc.l
 
 The library supports multiple house systems:
 
-- `HouseSystem.PLACIDUS` - Most commonly used
-- `HouseSystem.KOCH` - Koch system
-- `HouseSystem.EQUAL` - Equal house system
-- `HouseSystem.WHOLE_SIGN` - Whole sign houses
+* `HouseSystem.PLACIDUS` - Most commonly used
+* `HouseSystem.KOCH` - Koch system
+* `HouseSystem.EQUAL` - Equal house system
+* `HouseSystem.WHOLE_SIGN` - Whole sign houses
 
 ## Usage Example
 
@@ -71,8 +79,10 @@ console.log(chart.planets.sun);  // Sun position
 console.log(chart.houses.ascendant);  // Ascendant
 ```
 
----
+### Live example
 
-If you find this package useful, you can support it on Ko-Fi too (or just star the repo):
+{% embed url="https://astrology.kaabalah.com" %}
+
+***
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/matmoura19)

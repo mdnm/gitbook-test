@@ -10,14 +10,14 @@ import { calculateKaabalisticLifePath, calculateStraightAcrossReductionLifePath,
 
 ## Exports
 
-- `calculateKaabalisticLifePath`
-- `calculateStraightAcrossReductionLifePath`
-- `calculateCycles`
-- `calculateChallenges`
-- `calculateFibonacciCycle`
-- `calculatePersonalCycles`
-- `getDateEnergies`
-- `isMasterNumber`
+* `calculateKaabalisticLifePath`
+* `calculateStraightAcrossReductionLifePath`
+* `calculateCycles`
+* `calculateChallenges`
+* `calculateFibonacciCycle`
+* `calculatePersonalCycles`
+* `getDateEnergies`
+* `isMasterNumber`
 
 ## Examples
 
@@ -82,9 +82,10 @@ const b = calculateStraightAcrossReductionLifePath(
 ### Kaabalistic Method
 
 The `calculateKaabalisticLifePath` function uses a synthesis-based approach that:
-- Preserves master numbers (11, 22, 33, 44, etc.)
-- Calculates personal mythology numbers
-- Provides detailed reduction steps
+
+* Preserves master numbers (11, 22, 33, 44, etc.)
+* Calculates personal mythology numbers
+* Provides detailed reduction steps
 
 ### Straight Across Reduction
 
@@ -103,8 +104,10 @@ console.log(lifePath.syntheses.finalSynthesis);  // Final synthesis
 console.log(lifePath.personalMythologyNumbers);  // Personal mythology
 ```
 
----
+### Live example
 
-If you find this package useful, you can support it on Ko-Fi too (or just star the repo):
+{% embed url="https://numerology.kaabalah.com" %}
+
+***
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/matmoura19)
