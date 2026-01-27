@@ -1,86 +1,116 @@
 ---
-description: Welcome to your team’s developer platform
+description: A comprehensive TypeScript library for numerology, astrology, kabbalah, and tarot
 layout:
   width: wide
   title:
-    visible: false
+    visible: true
   description:
-    visible: false
+    visible: true
   tableOfContents:
-    visible: false
+    visible: true
   outline:
     visible: false
   pagination:
-    visible: false
-  metadata:
     visible: true
-metaLinks:
-  alternates:
-    - https://app.gitbook.com/s/2AwfWOGBWBxQmyvHedqW/
 ---
 
-# Developer Platform
+# Kaabalah
 
-<h2 align="center">Kaabalah</h2>
+<p align="center"><strong>The de-facto library for esoteric calculations and tooling</strong></p>
 
-<p align="center">The de-facto library for any esoteric calculations and tooling</p>
-
-```
+```bash
 npm install kaabalah
 ```
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><h4><i class="fa-leaf">:leaf:</i></h4></td><td><strong>AGPL-3.0 license</strong></td><td>Get started with the developer platform in 5 minutes.</td><td><a href="https://template.gitbook.com/space-product-docs">https://template.gitbook.com/space-product-docs</a></td><td><a href=".gitbook/assets/no-code.jpg">no-code.jpg</a></td></tr><tr><td><h4><i class="fa-server">:server:</i></h4></td><td><strong>Tree-Shakable</strong></td><td>Learn more about hosting the developer platform.</td><td><a href="https://template.gitbook.com/space-product-docs">https://template.gitbook.com/space-product-docs</a></td><td><a href=".gitbook/assets/hosted.jpg">hosted.jpg</a></td></tr><tr><td><h4><i class="fa-terminal">:terminal:</i></h4></td><td><strong>API reference</strong></td><td>Browse, test, and implement APIs.</td><td><a href="https://template.gitbook.com/space-api-reference">https://template.gitbook.com/space-api-reference</a></td><td><a href=".gitbook/assets/api-reference.jpg">api-reference.jpg</a></td></tr></tbody></table>
+## Modules
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody>
+<tr><td><strong>🔢 Numerology</strong></td><td>Life path, cycles, challenges, and personal mythology calculations</td><td><a href="modules/numerology.md">modules/numerology.md</a></td></tr>
+<tr><td><strong>✡️ Gematria</strong></td><td>Hebrew letter values with reverse gematria lookup</td><td><a href="modules/gematria.md">modules/gematria.md</a></td></tr>
+<tr><td><strong>🌟 Astrology</strong></td><td>Birth charts and planetary positions via Swiss Ephemeris</td><td><a href="modules/astrology.md">modules/astrology.md</a></td></tr>
+<tr><td><strong>🃏 Tarot</strong></td><td>78 cards with meanings, spreads, and interpretations</td><td><a href="modules/tarot.md">modules/tarot.md</a></td></tr>
+<tr><td><strong>🐚 Ifa</strong></td><td>Odu calculations based on dates for Ifa divination</td><td><a href="modules/ifa.md">modules/ifa.md</a></td></tr>
+<tr><td><strong>🌳 Core</strong></td><td>Tree of Life system linking all esoteric correspondences</td><td><a href="modules/core.md">modules/core.md</a></td></tr>
+</tbody></table>
+
+## Quick Start
 
 {% columns %}
 {% column %}
+
 ### Get started in 5 minutes
 
-Setting up your first calculation should be the easiest part of getting started. With clear APIs, copy-paste-ready examples, and quick setup, you’ll be up and running in minutes—not hours.
+Setting up your first calculation is easy. With clear APIs, copy-paste-ready examples, and quick setup, you'll be up and running in minutes.
 
-No guesswork, no complexity—just your first successful calculation, fast.
+<a href="docs/getting-started.md" class="button primary">Get Started</a> <a href="reference/api.md" class="button secondary">API Reference</a>
 
-<a href="https://github.com/mdnm/kaabalah" class="button primary" data-icon="rocket-launch">Get started</a> <a href="https://github.com/mdnm/kaabalah" class="button secondary" data-icon="terminal">API reference</a>
 {% endcolumn %}
 
 {% column %}
-{% code title="index.js" overflow="wrap" %}
-```javascript
 
-// Import the SDK
-import { createTree } from 'kaabalah/core';
+{% code title="example.ts" overflow="wrap" %}
+```typescript
+import { calculateGematria } from 'kaabalah/gematria';
+import { calculateKaabalisticLifePath } from 'kaabalah/numerology';
 
-// Initialize the tree
-const tree = createTree({
-  system: 'kaabalah',
-  parts: ['westernAstrology', 'tarot'],
-});
+// Calculate gematria for a name
+const gematria = calculateGematria('DAVID');
+console.log(gematria.synthesis.originalSum); // 25
 
-// Calculate the gematria of a name
-const gematriaResult = calculateGematria('kaabalah', tree);
-
-console.log(gematriaResult);
-
+// Calculate life path from birth date
+const lifePath = calculateKaabalisticLifePath(new Date('1990-06-15'));
+console.log(lifePath.lifePath.reducedValue);
 ```
 {% endcode %}
+
 {% endcolumn %}
 {% endcolumns %}
+
+## Features
 
 {% columns %}
 {% column %}
-<figure><img src="https://gitbookio.github.io/onboarding-template-images/placeholder.png" alt=""><figcaption></figcaption></figure>
+
+### Tree-Shakable
+
+Import only what you need. Each module is independently tree-shakable for optimal bundle size.
+
+```typescript
+// Only imports gematria module
+import { calculateGematria } from 'kaabalah/gematria';
+```
+
 {% endcolumn %}
 
 {% column %}
-### Learn more about the developer platform
 
-Read guides, watch tutorials, and learn more about working with the developer platform and integrating it with your own stack.
+### TypeScript First
 
-<a href="https://github.com/mdnm/kaabalah" class="button primary" data-icon="book-open">Guides</a> <a href="https://github.com/mdnm/kaabalah" class="button secondary" data-icon="book">Documentation</a>
+Full TypeScript support with comprehensive type definitions for all functions and return values.
+
+```typescript
+import type { TarotCard, GematriaResult } from 'kaabalah';
+```
+
 {% endcolumn %}
 {% endcolumns %}
 
-<h2 align="center">Join a community of over 3,000 developers</h2>
+## Learn More
 
-<p align="center">Join our Discord community or create your first PR in just a few steps.</p>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody>
+<tr><td><strong>📚 Documentation</strong></td><td>Complete guides and tutorials for all modules</td><td><a href="docs/getting-started.md">docs/getting-started.md</a></td></tr>
+<tr><td><strong>🔧 WebAssembly</strong></td><td>Swiss Ephemeris WASM integration guide</td><td><a href="guides/webassembly.md">guides/webassembly.md</a></td></tr>
+<tr><td><strong>📖 API Reference</strong></td><td>Detailed API documentation for all exports</td><td><a href="reference/api.md">reference/api.md</a></td></tr>
+</tbody></table>
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><h4><i class="fa-discord">:discord:</i></h4></td><td><strong>Discord community</strong></td><td>Join our Discord community to post questions, get help, and share resources with over 3,000 like-minded developers.</td><td><a href="https://kaabalah.com/" class="button secondary">Join Discord</a></td><td></td></tr><tr><td><h4><i class="fa-github">:github:</i></h4></td><td><strong>GitHub</strong></td><td>Our product is 100% open source and built by developers just like you. Head to our GitHub repository to learn how to submit your first PR.</td><td><a href="https://github.com/mdnm/kaabalah" class="button secondary">Submit a PR</a></td><td></td></tr></tbody></table>
+## Community
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody>
+<tr><td><strong>GitHub</strong></td><td>100% open source. Star the repo, report issues, or submit PRs.</td><td><a href="https://github.com/mdnm/kaabalah" class="button secondary">View on GitHub</a></td></tr>
+</tbody></table>
+
+---
+
+If you find this package useful, you can support it on Ko-Fi too (or just star the repo):
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/matmoura19)
